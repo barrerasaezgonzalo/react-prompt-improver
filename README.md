@@ -197,11 +197,9 @@ Permite configurar campos avanzados (contexto, rol, objetivos, formato, etc.) pa
 Selecciona una plantilla predefinida, reemplaza los valores dentro de los `[corchetes]` y genera tu prompt inicial.  
 ![Vista Plantillas](https://github.com/user-attachments/assets/e49672d0-7a8d-46fc-87ef-a7e0cfb9fbb7)
 
+## 🔗 Vercel
 
-
-## 🔗 Link a Vercel
-
-- Aplicación desplegada en: URL
+- Prueba la aplicación directamente en [React Prompt Improver](https://react-prompt-improver.vercel.app/).
 
 ## 📄 License
 
