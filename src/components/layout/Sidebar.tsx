@@ -59,7 +59,7 @@ export function Sidebar() {
       </nav>
 
       <div className="fixed bottom-5">
-        <Link href="" target="_blank">
+        <Link href="https://github.com/barrerasaezgonzalo/react-prompt-improver" target="_blank"  aria-label="Repositorio en GitHub"> 
           <GitBranch size={15} />
         </Link>
       </div>
