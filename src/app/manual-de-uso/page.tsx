@@ -193,7 +193,7 @@ export default function ManualDeUso() {
                 Formato: “Pasos numerados con ejemplos.”
               </div>
 
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-300 text-sm">
                 Diferencia clave: Preciso permite definir estructura, rol,
                 restricciones y formato exacto.
               </p>
