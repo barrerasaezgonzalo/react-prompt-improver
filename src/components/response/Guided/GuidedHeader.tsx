@@ -3,7 +3,7 @@ import Link from "next/link";
 export function GuidedHeader() {
   return (
     <>
-      <h1 className="text-3xl font-bold text-white">
+      <h1 className="text-3xl font-bold text-white mt-6 md:mt-0">
         Este es tu prompt mejorado (modo guiado)
       </h1>
 

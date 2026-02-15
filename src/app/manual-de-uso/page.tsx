@@ -10,9 +10,9 @@ export default function ManualDeUso() {
 
       <section className="flex-1 p-6 md:p-10">
         <div className="max-w-3xl mx-auto flex flex-col gap-12">
-          {/* Header */}
+          
           <header className="flex flex-col gap-4">
-            <h1 className="text-3xl font-bold text-white">
+            <h1 className="text-3xl font-bold text-white mt-6 md:mt-0">
               <span className="text-cyan-500">Manual</span> de uso
             </h1>
             <p className="text-gray-400 leading-relaxed">
@@ -22,7 +22,6 @@ export default function ManualDeUso() {
             </p>
           </header>
 
-          {/* FAQ */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               Preguntas frecuentes
@@ -67,7 +66,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Estructura */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               <span className="text-cyan-500">Estructura</span> del sitio
@@ -80,7 +78,6 @@ export default function ManualDeUso() {
             </ul>
           </section>
 
-          {/* Pasos */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               Cómo usar la aplicación
@@ -106,13 +103,11 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Modos */}
           <section className="flex flex-col gap-8">
             <h2 className="text-xl font-semibold text-white">
               Modos disponibles
             </h2>
 
-            {/* Rápido */}
             <div className="flex flex-col gap-3">
               <h3 className="text-lg font-semibold text-white">
                 Modo <span className="text-cyan-500">Rápido</span>
@@ -129,7 +124,6 @@ export default function ManualDeUso() {
               </div>
             </div>
 
-            {/* Guiado */}
             <div className="flex flex-col gap-3">
               <h3 className="text-lg font-semibold text-white">
                 Modo <span className="text-cyan-500">Guiado</span>
@@ -159,7 +153,6 @@ export default function ManualDeUso() {
               </p>
             </div>
 
-            {/* Preciso */}
             <div className="flex flex-col gap-3">
               <h3 className="text-lg font-semibold text-white">
                 Modo <span className="text-cyan-500">Preciso</span>
@@ -200,7 +193,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Después de generar */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               <span className="text-cyan-500">
@@ -225,7 +217,6 @@ export default function ManualDeUso() {
             </p>
           </section>
 
-          {/* Recursos adicionales */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               <span className="text-cyan-500">Recursos disponibles</span>

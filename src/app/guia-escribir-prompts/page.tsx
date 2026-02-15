@@ -11,7 +11,7 @@ export default function ManualDeUso() {
       <section className="flex-1 p-6 md:p-10">
         <div className="max-w-3xl mx-auto flex flex-col gap-12">
           <header className="flex flex-col gap-4">
-            <h1 className="text-3xl font-bold text-white">
+            <h1 className="text-3xl font-bold text-white mt-6 md:mt-0">
               Guía para escribir{" "}
               <span className="text-cyan-500">mejores prompts</span>
             </h1>
@@ -25,7 +25,6 @@ export default function ManualDeUso() {
             </p>
           </header>
 
-          {/* FAQs */}
           <section className="flex flex-col gap-6">
             <h2 className="text-xl font-semibold text-white">
               Preguntas frecuentes
@@ -75,7 +74,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Sección 1 */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               1. Sé claro y específico
@@ -94,7 +92,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Sección 2 */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               2. Define el <span className="text-cyan-500">rol del modelo</span>
@@ -110,7 +107,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Sección 3 */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               3. Añade <span className="text-cyan-500">contexto</span> relevante
@@ -126,7 +122,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Sección 4 */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               4. Especifica el{" "}
@@ -142,7 +137,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Sección 5 */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               5. <span className="text-cyan-500">Divide</span> tareas complejas
@@ -158,7 +152,6 @@ export default function ManualDeUso() {
             </div>
           </section>
 
-          {/* Plantilla práctica */}
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-white">
               Plantilla <span className="text-cyan-500">recomendada</span>
@@ -166,10 +159,10 @@ export default function ManualDeUso() {
 
             <div className="bg-zinc-900 p-4 rounded-lg text-sm text-gray-300 whitespace-pre-line">
               {`Actúa como [rol].
-Mi objetivo es: [qué quiero lograr].
-Contexto: [información relevante].
-Restricciones: [límites o condiciones].
-Formato de salida: [cómo quiero la respuesta].`}
+              Mi objetivo es: [qué quiero lograr].
+              Contexto: [información relevante].
+              Restricciones: [límites o condiciones].
+              Formato de salida: [cómo quiero la respuesta].`}
             </div>
 
             <p className="text-gray-400 leading-relaxed">

@@ -2,7 +2,7 @@ export function PreciseHeader() {
   return (
     <>
       {" "}
-      <h1 className="text-3xl font-bold text-white">
+      <h1 className="text-3xl font-bold text-white mt-6 md:mt-0">
         Construye tu prompt (modo preciso)
       </h1>
       <p className="leading-relaxed text-md text-gray-400">

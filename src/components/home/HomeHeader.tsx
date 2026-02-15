@@ -1,7 +1,7 @@
 export function HomeHeader() {
   return (
     <header className="flex flex-col gap-3">
-      <h1 className="mb-4 text-3xl font-bold text-white">
+      <h1 className="mb-4 text-3xl font-bold text-white mt-6 md:mt-0">
         Mejora tus prompts <span className="text-cyan-500">en segundos</span>
       </h1>
 

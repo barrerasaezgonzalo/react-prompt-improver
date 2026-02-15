@@ -23,7 +23,7 @@ export default function Plantillas() {
       <section className="flex-1 p-6 md:p-10">
         <div className="max-w-3xl mx-auto flex flex-col gap-4">
           <header className="flex flex-col gap-2">
-            <h1 className="text-3xl font-bold text-white">
+            <h1 className="text-3xl font-bold text-white mt-6 md:mt-0">
               Plantillas disponibles
             </h1>
             <p className="text-gray-400">

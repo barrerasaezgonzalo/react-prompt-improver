@@ -3,7 +3,7 @@ import Link from "next/link";
 export function FastHeader() {
   return (
     <>
-      <h1 className="mb-4 text-3xl font-bold text-white">
+      <h1 className="mb-4 text-3xl font-bold text-white mt-6 md:mt-0">
         Este es tu prompt mejorado (modo rápido)
       </h1>
 
