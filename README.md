@@ -178,11 +178,12 @@ http://localhost:3000
 ## 📸 Capturas de pantalla
 
 
-![Vista principal](/Readme/screenshot1.png)
-![Vista Modo Rapido](/Readme/screenshot2.png)
-![Vista Modo Guiado](/Readme/screenshot3.png)
-![Vista Modo Preciso](/Readme/screenshot4.png)
-![Vista Plantillas](/Readme/screenshot5.png)
+![Vista principal](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot1.png?raw=true)
+![Vista Modo Rapido](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot2.png?raw=true)
+![Vista Modo Guiado](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot3.png?raw=true)
+![Vista Modo Preciso](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot4.png?raw=true)
+![Vista Plantillas](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot5.png?raw=true)
+
 
 ## 🔗 Link a Vercel
 
