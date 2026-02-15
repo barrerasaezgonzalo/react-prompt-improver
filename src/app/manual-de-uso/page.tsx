@@ -154,7 +154,7 @@ export default function ManualDeUso() {
                 de rendimiento.”
               </div>
 
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-400 text-sm">
                 Diferencia clave: Guiado solo amplía el contexto.
               </p>
             </div>
