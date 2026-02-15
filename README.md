@@ -177,12 +177,26 @@ http://localhost:3000
 
 ## 📸 Capturas de pantalla
 
+### Vista principal
+Explora el prompt inicial, selecciona el modo y comienza a mejorar tus prompts.  
+![Vista principal](https://github.com/user-attachments/assets/ed23c884-3ec8-45b0-b114-44645ba07834)
 
-![Vista principal](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot1.png?raw=true)
-![Vista Modo Rapido](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot2.png?raw=true)
-![Vista Modo Guiado](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot3.png?raw=true)
-![Vista Modo Preciso](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot4.png?raw=true)
-![Vista Plantillas](https://github.com/barrerasaezgonzalo/react-prompt-improver/blob/main/Readme/screenshot5.png?raw=true)
+### Modo Rápido
+Genera un prompt mejorado de manera inmediata con el menor número de opciones.  
+![Vista Modo Rápido](https://github.com/user-attachments/assets/6344e874-bf0b-4c7e-b84d-0ed86c6ad92d)
+
+### Modo Guiado
+Agrega contexto adicional para que la IA genere un prompt más adaptado a tus necesidades.  
+![Vista Modo Guiado](https://github.com/user-attachments/assets/0a9e1523-ce5b-46f8-bbe9-6e2fae94fd07)
+
+### Modo Preciso
+Permite configurar campos avanzados (contexto, rol, objetivos, formato, etc.) para un prompt muy detallado.  
+![Vista Modo Preciso](https://github.com/user-attachments/assets/05f4a9c8-1d9c-462c-9fc3-66a17d42c738)
+
+### Plantillas
+Selecciona una plantilla predefinida, reemplaza los valores dentro de los `[corchetes]` y genera tu prompt inicial.  
+![Vista Plantillas](https://github.com/user-attachments/assets/e49672d0-7a8d-46fc-87ef-a7e0cfb9fbb7)
+
 
 
 ## 🔗 Link a Vercel
