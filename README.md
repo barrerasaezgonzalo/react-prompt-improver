@@ -178,11 +178,11 @@ http://localhost:3000
 ## 📸 Capturas de pantalla
 
 
-![Vista principal](./Public/Readme/screenshot1.png)
-![Vista Modo Rapido](./Public/Readme/screenshot2.png)
-![Vista Modo Guiado](./Public/Readme/screenshot3.png)
-![Vista Modo Preciso](./Public/Readme/screenshot4.png)
-![Vista Plantillas](./Public/Readme/screenshot5.png)
+![Vista principal](/Readme/screenshot1.png)
+![Vista Modo Rapido](/Readme/screenshot2.png)
+![Vista Modo Guiado](/Readme/screenshot3.png)
+![Vista Modo Preciso](/Readme/screenshot4.png)
+![Vista Plantillas](/Readme/screenshot5.png)
 
 ## 🔗 Link a Vercel
 
