@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Prompt Improver",
-  description: "Mejora tus prompts en segundos!",
+  description: "Descubre cómo nuestro mejorador de prompts puede ayudarte a mejorar tus resultados de IA con algoritmos avanzados y técnicas de optimización inteligentes. Potencia ChatGPT y otros modelos en segundos.",
 };
 
 export default function RootLayout({
