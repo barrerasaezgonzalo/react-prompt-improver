@@ -30,10 +30,10 @@ export async function POST(req: Request) {
             - El JSON debe tener una sola clave "prompt" y el valor debe ser la descripción detallada.
             - Haz que el prompt sea **detallado y extenso**, incluyendo ejemplos, pasos y contexto razonable.
             - No agregues explicaciones ni texto extra. 
-          ${role ? `Actúa como ${role}.` : ""}
+          ${role ? `El prompt debe indicar que debe "Actúar como ${role}.` : ""}
           ${objective ? `El objetivo del prompt es: ${objective}.` : ""}
-          ${inputContext ? `Considera el siguiente contexto adicional: ${inputContext}.` : ""}
-          ${constraints ? `Aplica las siguientes restricciones: ${constraints}.` : ""}
+          ${inputContext ? `El prompt debe considerar el siguiente contexto adicional: ${inputContext}.` : ""}
+          ${constraints ? `El prompt debe indicar que se Aplican las siguientes restricciones: ${constraints}.` : ""}
           ${outputFormat ? `El prompt debe indicar que la salida final del modelo objetivo esté en este formato: ${outputFormat}.` : ""}
           \nID: ${Date.now()}
             `.trim(),
