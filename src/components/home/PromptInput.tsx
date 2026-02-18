@@ -40,7 +40,7 @@ export function PromptInput({
           disabled={!prompt || loading}
           onClick={handleClearPrompt}
           className="bg-white text-zinc-900 hover:bg-zinc-200 ml-auto"
-          title="Limpiear"
+          title="Limpiar"
         >
           <BrushCleaning size={20} />
         </Button>

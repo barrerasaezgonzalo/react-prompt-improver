@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Prompt Improver",
-  description: "Descubre cómo nuestro mejorador de prompts puede ayudarte a mejorar tus resultados de IA con algoritmos avanzados y técnicas de optimización inteligentes. Potencia ChatGPT y otros modelos en segundos.",
+  description:
+    "Descubre cómo nuestro mejorador de prompts puede ayudarte a mejorar tus resultados de IA con algoritmos avanzados y técnicas de optimización inteligentes. Potencia ChatGPT y otros modelos en segundos.",
 };
 
 export default function RootLayout({
@@ -27,7 +28,10 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <meta name="robots" content="index, follow" />
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VQE9GZRD4"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7VQE9GZRD4"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -8,19 +8,20 @@ La aplicación implementa distintos modos de mejora (Rapid, Guided y
 Precise), cada uno con una estrategia específica para maximizar
 claridad, contexto y calidad de salida del modelo objetivo.
 
-------------------------------------------------------------------------
+---
 
 ## 🚀 Tecnologías Utilizadas
 
--   Next.js (App Router)
--   React
--   TypeScript
--   Route Handlers (API interna)
--   React Context API
--   Hooks personalizados
--   Componentes UI reutilizables
+- Next.js (App Router)
+- React
+- TypeScript
+- Route Handlers (API interna)
+- React Context API
+- Hooks personalizados
+- Componentes UI reutilizables
+- Vitest
 
-------------------------------------------------------------------------
+---
 
 ## 🏗 Arquitectura
 
@@ -39,20 +40,20 @@ constants.ts
 
 ### Capas
 
--   **app**: Definición de rutas y endpoints (App Router).
--   **components**: Componentes UI y componentes específicos por
-    feature.
--   **context**: Manejo de estado global.
--   **hooks**: Lógica reutilizable desacoplada.
--   **lib**: Utilidades puras.
--   **types.ts / constants.ts**: Definición de contratos y
-    configuración.
+- **app**: Definición de rutas y endpoints (App Router).
+- **components**: Componentes UI y componentes específicos por
+  feature.
+- **context**: Manejo de estado global.
+- **hooks**: Lógica reutilizable desacoplada.
+- **lib**: Utilidades puras.
+- **types.ts / constants.ts**: Definición de contratos y
+  configuración.
 
 Dentro de `components/response` existe una organización parcial por
 feature (Rapid, Guided, Precise), agrupando los componentes específicos
 de cada modo.
 
-------------------------------------------------------------------------
+---
 
 ## 🔄 Flujo Funcional
 
@@ -69,20 +70,43 @@ de cada modo.
 
 UI → Context → Route Handler → Modelo → Respuesta → UI
 
-------------------------------------------------------------------------
+---
 
 ## 🧠 Gestión de Estado
 
 Se utiliza React Context para:
 
--   Persistir el prompt original.
--   Persistir el modo seleccionado.
--   Compartir estado entre páginas.
+- Persistir el prompt original.
+- Persistir el modo seleccionado.
+- Compartir estado entre páginas.
 
 No se utilizan librerías externas de estado debido a la simplicidad
 actual del dominio.
 
-------------------------------------------------------------------------
+---
+
+## 🧪 Testing
+
+El proyecto incluye testing unitario y de integración para proteger la lógica crítica del sistema.
+
+Estrategia
+
+Se adoptó un enfoque basado en capas:
+
+- **Funciones puras** (lib/)
+  Testeadas de forma determinística (sin mocks). - getRequestConfig - buildFinalBody
+
+- **Hook principal** (usePrompt)
+  Test de integración controlada: - Validación de flujo exitoso. - Validación de manejo de errores. - Validación de contrato del Provider.
+
+- **PromptProvider**
+  Test de inicialización y contrato del contexto.
+
+**Cobertura**
+
+El proyecto mantiene cobertura del 100% en la capa de dominio y hooks principales.
+
+---
 
 ## 🔌 API Interna
 
@@ -92,14 +116,14 @@ app/api/prompt/
 
 Cada modo implementa su propio `route.ts`:
 
--   /api/prompt/rapid
--   /api/prompt/guided
--   /api/prompt/precise
+- /api/prompt/rapid
+- /api/prompt/guided
+- /api/prompt/precise
 
 Esto permite desacoplar la lógica de cada estrategia de mejora y
 facilita la escalabilidad.
 
-------------------------------------------------------------------------
+---
 
 ## 📈 Escalabilidad
 
@@ -113,16 +137,16 @@ Para agregar un nuevo modo de mejora:
 La arquitectura permite crecer horizontalmente por modo sin afectar el
 núcleo del sistema.
 
-------------------------------------------------------------------------
+---
 
 ## ⚠️ Manejo de Errores
 
--   Validación de existencia de prompt y modo.
--   Estados de carga.
--   Posibilidad de extender los handlers para capturar errores de red o
-    limitaciones del modelo.
+- Validación de existencia de prompt y modo.
+- Estados de carga.
+- Posibilidad de extender los handlers para capturar errores de red o
+  limitaciones del modelo.
 
-------------------------------------------------------------------------
+---
 
 ## 🧩 Decisiones Técnicas Clave
 
@@ -131,19 +155,18 @@ núcleo del sistema.
 - Separación parcial por feature dentro de response/.
 - Endpoints desacoplados por modo.
 
-------------------------------------------------------------------------
+---
 
 ## 🔮 Mejoras Futuras
 
--   Migración a arquitectura completamente feature-based.
--   Validación de datos con Zod.
--   Implementación de testing unitario.
--   Persistencia de historial de prompts.
--   Introducción de caching.
--   Optimización de renderizado.
--   Manejo avanzado de errores y retry automático.
+- Migración a arquitectura completamente feature-based.
+- Validación de datos con Zod.
+- Persistencia de historial de prompts.
+- Introducción de caching.
+- Optimización de renderizado.
+- Manejo avanzado de errores y retry automático.
 
-------------------------------------------------------------------------
+---
 
 ## ⚙️ Configuración de Variables de Entorno
 
@@ -162,11 +185,11 @@ app/api/prompt/
 Asegúrate de no subir este archivo al repositorio.
 .env.local ya está incluido por defecto en .gitignore en proyectos Next.js.
 
-------------------------------------------------------------------------
+---
 
 ## 📦 Instalación
 
-``` bash
+```bash
 npm install
 npm run dev
 ```
@@ -175,29 +198,43 @@ La aplicación estará disponible en:
 
 http://localhost:3000
 
+## 🧪 Ejecutar test
+
+```bash
+npm run test
+```
+
+---
+
 ## 📸 Capturas de pantalla
 
 ### Vista principal
+
 Explora el prompt inicial, selecciona el modo y comienza a mejorar tus prompts.  
 ![Vista principal](https://github.com/user-attachments/assets/ed23c884-3ec8-45b0-b114-44645ba07834)
 
 ### Modo Rápido
+
 Genera un prompt mejorado de manera inmediata con el menor número de opciones.  
 ![Vista Modo Rápido](https://github.com/user-attachments/assets/6344e874-bf0b-4c7e-b84d-0ed86c6ad92d)
 
 ### Modo Guiado
+
 Agrega contexto adicional para que la IA genere un prompt más adaptado a tus necesidades.  
 ![Vista Modo Guiado](https://github.com/user-attachments/assets/0a9e1523-ce5b-46f8-bbe9-6e2fae94fd07)
 
 ### Modo Preciso
+
 Permite configurar campos avanzados (contexto, rol, objetivos, formato, etc.) para un prompt muy detallado.  
 ![Vista Modo Preciso](https://github.com/user-attachments/assets/05f4a9c8-1d9c-462c-9fc3-66a17d42c738)
 
 ### Plantillas
+
 Selecciona una plantilla predefinida, reemplaza los valores dentro de los `[corchetes]` y genera tu prompt inicial.  
 ![Vista Plantillas](https://github.com/user-attachments/assets/e49672d0-7a8d-46fc-87ef-a7e0cfb9fbb7)
 
 ### Lighthouse
+
 ![Lighthouse](https://github.com/user-attachments/assets/26448618-3f48-415c-83b2-03eeabc00bea)
 
 ## 🔗 Vercel
@@ -206,4 +243,4 @@ Selecciona una plantilla predefinida, reemplaza los valores dentro de los `[corc
 
 ## 📄 License
 
-MIT 
+MIT

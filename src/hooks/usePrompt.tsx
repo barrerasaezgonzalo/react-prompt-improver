@@ -1,6 +1,8 @@
 import { PromptContext } from "@/context/PromptContext";
-import { Mode } from "node:fs";
+import { Mode } from "@/types";
 import { useContext, useState } from "react";
+import { getRequestConfig, buildFinalBody } from "@/lib/promptRequest";
+import { postPrompt } from "@/lib/promptService";
 
 export function usePrompt() {
   const context = useContext(PromptContext);
@@ -11,6 +13,7 @@ export function usePrompt() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
   const {
     prompt,
     mode,
@@ -29,31 +32,6 @@ export function usePrompt() {
     setOutputFormat,
   } = context;
 
-  const getRequestConfig = (mode: Mode) => {
-    switch (mode) {
-      case "rapido":
-        return {
-          endpoint: "/api/prompt/rapid",
-          body: { prompt },
-        };
-
-      case "guiado":
-        return {
-          endpoint: "/api/prompt/guided",
-          body: { prompt, extraData },
-        };
-
-      case "preciso":
-        return {
-          endpoint: "/api/prompt/precise",
-          body: { prompt, extraData },
-        };
-
-      default:
-        throw new Error("Modo inválido");
-    }
-  };
-
   const generate = async (
     extraData?: Record<string, unknown>,
     preciseData?: Record<string, unknown>,
@@ -61,15 +39,19 @@ export function usePrompt() {
     try {
       setLoading(true);
       setError(null);
-      const { endpoint, body } = getRequestConfig(mode);
-      const finalBody = { ...body, ...extraData, ...preciseData };
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(finalBody),
-      });
-      const data = await response.json();
+
+      const { endpoint, body } = getRequestConfig(
+        mode as Mode,
+        prompt,
+        extraData,
+      );
+
+      const finalBody = buildFinalBody(body, extraData, preciseData);
+
+      const data = await postPrompt(endpoint, finalBody);
+
       const parsedResult = JSON.parse(data.result);
+
       setImprovedPrompt(parsedResult.prompt);
 
       return data.result;

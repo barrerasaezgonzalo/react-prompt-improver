@@ -10,7 +10,6 @@ export default function ManualDeUso() {
 
       <section className="flex-1 p-6 md:p-10">
         <div className="max-w-3xl mx-auto flex flex-col gap-12">
-          
           <header className="flex flex-col gap-4">
             <h1 className="text-3xl font-bold text-white mt-6 md:mt-0">
               <span className="text-cyan-500">Manual</span> de uso
